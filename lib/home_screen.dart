@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:ai_assistent/about_us.dart';
 import 'package:ai_assistent/site_webview.dart';
 import 'package:ai_assistent/web_screen.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -96,12 +97,22 @@ class _HomeScreenState extends State<HomeScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Expanded(child: Container(
-              child: Padding(
-                padding: const EdgeInsets.only(left: 30.0),
-                child: SvgPicture.asset(
-                  "assets/images/search_icon.svg",
-                  height: 25.h,
+            Expanded(child: InkWell(
+              onTap: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SiteWebView(),
+                  ),
+                );
+              },
+              child: Container(
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 30.0),
+                  child: SvgPicture.asset(
+                    "assets/images/internet_icon.svg",
+                    height: 25.h,
+                  ),
                 ),
               ),
             )),
@@ -116,17 +127,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => SiteWebView(),
+                    builder: (context) => AboutUs(),
                   ),
                 );
               },
               child: Container(
-                child: Padding(
-                  padding: const EdgeInsets.only(right: 30.0),
-                  child: SvgPicture.asset(
-                    "assets/images/internet_icon.svg",
-                    height: 25.h,
-                  ),
+                child: const Padding(
+                  padding: EdgeInsets.only(right: 30.0),
+                  child: Icon(Icons.groups,size: 40,color: Color(0xffd5d4d4),)
                 ),
               ),
             )),

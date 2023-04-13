@@ -1,3 +1,4 @@
+import 'package:ai_assistent/about_us.dart';
 import 'package:ai_assistent/home_screen.dart';
 import 'package:ai_assistent/on_boarding.dart';
 import 'package:flutter/material.dart';

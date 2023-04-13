@@ -1,5 +1,6 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
@@ -130,7 +131,7 @@ class _WebScreenState extends State<WebScreen> {
       )
       ..loadRequest(Uri.parse(myData[widget.id]['link']));
 
-    _loadRewardedAd();
+    //_loadRewardedAd();
   }
 
   @override
@@ -154,6 +155,7 @@ class _WebScreenState extends State<WebScreen> {
     Connectivity connectivity=Connectivity();
     return isConnected ? buildMainContent() : buildErrorContent();
   }
+
   Widget buildMainContent() {
     return StreamBuilder(
         stream: connectivity.onConnectivityChanged,
@@ -162,7 +164,6 @@ class _WebScreenState extends State<WebScreen> {
           return snapshot.connectionState==ConnectionState.active?
           snapshot.data!=ConnectivityResult.none?
           Scaffold(
-            //bottomNavigationBar:
             appBar: AppBar(
               backgroundColor: AppColors.colorPrimary,
               title: Text(myData[widget.id]['appbar']),
@@ -186,6 +187,7 @@ class _WebScreenState extends State<WebScreen> {
                               )),
                         )),
                   ),
+                SizedBox(height: 150.h,),
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: ClipRRect(
@@ -199,7 +201,7 @@ class _WebScreenState extends State<WebScreen> {
                         color: Colors.white,
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.black12,
+                            color: Colors.blue,
                             spreadRadius: 1.0,
                             blurRadius: 5.0,
                             offset: Offset(1, 1,), // changes position of shadow
@@ -295,7 +297,8 @@ class _WebScreenState extends State<WebScreen> {
                 )
               ],
             ),
-          ) : Scaffold(
+          ) :
+          Scaffold(
             body: Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -331,7 +334,8 @@ class _WebScreenState extends State<WebScreen> {
                 ],
               ),
             ),
-          ) :Scaffold(
+          ) :
+          Scaffold(
             appBar: AppBar(
               backgroundColor: AppColors.colorPrimary,
               title: Text(myData[widget.id]['appbar']),
@@ -339,7 +343,6 @@ class _WebScreenState extends State<WebScreen> {
             body: Stack(
               children: [
                 WebViewWidget(controller: controller),
-                SizedBox(height: 150.h,),
                 if (isLoading)
                   Center(
                     child: Center(
@@ -356,6 +359,7 @@ class _WebScreenState extends State<WebScreen> {
                               )),
                         )),
                   ),
+                SizedBox(height: 150.h,),
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: ClipRRect(
@@ -369,7 +373,7 @@ class _WebScreenState extends State<WebScreen> {
                         color: Colors.white,
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.black12,
+                            color: Colors.blue,
                             spreadRadius: 1.0,
                             blurRadius: 5.0,
                             offset: Offset(1, 1,), // changes position of shadow
