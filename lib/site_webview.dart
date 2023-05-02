@@ -96,7 +96,7 @@ class _SiteWebViewState extends State<SiteWebView> {
                       child: Container(
                         height: 96,
                         width: 96,
-                        margin: EdgeInsets.symmetric(horizontal: 20),
+                        margin: const EdgeInsets.symmetric(horizontal: 20),
                         decoration: BoxDecoration(
                             color: AppColors.colorPrimary,
                             borderRadius: BorderRadius.circular(12)),
@@ -155,7 +155,7 @@ class _SiteWebViewState extends State<SiteWebView> {
                         child: Container(
                           height: 96,
                           width: 96,
-                          margin: EdgeInsets.symmetric(horizontal: 20),
+                          margin: const EdgeInsets.symmetric(horizontal: 20),
                           decoration: BoxDecoration(
                               color: AppColors.colorPrimary,
                               borderRadius: BorderRadius.circular(12)),

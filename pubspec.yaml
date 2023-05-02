@@ -43,7 +43,7 @@ dependencies:
   lottie: ^2.3.2
   google_mobile_ads: ^2.4.0
   shared_preferences:
-
+  url_launcher: ^6.1.10
 
 dev_dependencies:
   flutter_test:

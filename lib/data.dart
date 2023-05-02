@@ -5,107 +5,107 @@ List<Map<String, dynamic>> myData = [
     'id': 0,
     'name': 'AI\nAssistant',
     'appbar': 'AI Assistant',
-    'link': 'https://aimodule.netlify.app/assistant',
+    'link': 'https://prochat.product8.net/assistant',
     'icon' : "assets/images/assistant.svg",
-    'color': Color(0xffAA3EFF)
+    'color': const Color(0xffAA3EFF)
   },
 
   {
     'id': 1,
     'name': 'Cold\nE-mail',
     'appbar': 'Cold E-mail',
-    'link': 'https://aimodule.netlify.app/cold',
+    'link': 'https://prochat.product8.net/cold',
     'icon' : "assets/images/cold.svg",
-    'color': Color(0xffFFC700)
+    'color': const Color(0xffFFC700)
   },
 
   {
     'id': 2,
     'name': 'Financial\nAdvisor',
     'appbar': 'Financial Advisor',
-    'link': 'https://aimodule.netlify.app/financial',
+    'link': 'https://prochat.product8.net/financial',
     'icon' : "assets/images/financial.svg",
-    'color': Color(0xffFF303F)
+    'color': const Color(0xffFF303F)
   },
 
   {
     'id': 3,
     'name': 'Blog\nWriting',
     'appbar': 'Blog Writing',
-    'link': 'https://aimodule.netlify.app/blog',
+    'link': 'https://prochat.product8.net/blog',
     'icon' : "assets/images/blog.svg",
-    'color': Color(0xff00D797)
+    'color': const Color(0xff00D797)
   },
 
   {
     'id': 4,
     'name': 'Product\nDescription',
     'appbar': 'Product Description',
-    'link': 'https://aimodule.netlify.app/product',
+    'link': 'https://prochat.product8.net/product',
     'icon' : "assets/images/product.svg",
-    'color': Color(0xffFF303F)
+    'color': const Color(0xffFF303F)
   },
 
   {
     'id': 5,
     'name': 'Job\nDescription',
     'appbar': 'Job Description',
-    'link': 'https://aimodule.netlify.app/job',
+    'link': 'https://prochat.product8.net/job',
     'icon' : "assets/images/job.svg",
-    'color': Color(0xff00D797)
+    'color': const Color(0xff00D797)
   },
 
   {
     'id': 6,
     'name': 'Social\nAdverts',
     'appbar': 'Social Adverts',
-    'link': 'https://aimodule.netlify.app/social',
+    'link': 'https://prochat.product8.net/social',
     'icon' : "assets/images/social.svg",
-    'color': Color(0xff807DFB)
+    'color': const Color(0xff807DFB)
   },
 
   {
     'id': 7,
     'name': 'PAS\nFramework',
     'appbar': 'PAS Framework',
-    'link': 'https://aimodule.netlify.app/pas',
+    'link': 'https://prochat.product8.net/pas',
     'icon' : "assets/images/pas.svg",
-    'color': Color(0xffAA3EFF)
+    'color': const Color(0xffAA3EFF)
   },
 
   {
     'id': 8,
     'name': 'Tech\nSupport',
     'appbar': 'Tech Support',
-    'link': 'https://aimodule.netlify.app/itsupport',
+    'link': 'https://prochat.product8.net/itsupport',
     'icon' : "assets/images/itsupport.svg",
-    'color': Color(0xff2F8AF4)
+    'color': const Color(0xff2F8AF4)
   },
 
   {
     'id': 9,
     'name': 'UVP\nFramework',
     'appbar': 'UVP Framework',
-    'link': 'https://aimodule.netlify.app/uvp',
+    'link': 'https://prochat.product8.net/uvp',
     'icon' : "assets/images/uvp.svg",
-    'color': Color(0xffAA3EFF)
+    'color': const Color(0xffAA3EFF)
   },
 
   {
     'id': 10,
     'name': 'AIDA\nFramework',
     'appbar': 'AIDA Framework',
-    'link': 'https://aimodule.netlify.app/aida',
+    'link': 'https://prochat.product8.net/aida',
     'icon' : "assets/images/aida.svg",
-    'color': Color(0xffFF303F)
+    'color': const Color(0xffFF303F)
   },
 
   {
     'id': 11,
     'name': 'Career\nConsultant',
     'appbar': 'Career Consultant',
-    'link': 'https://aimodule.netlify.app/career',
+    'link': 'https://prochat.product8.net/career',
     'icon' : "assets/images/career.svg",
-    'color': Color(0xff362E93)
+    'color': const Color(0xff362E93)
   },
 ];

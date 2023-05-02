@@ -1,4 +1,3 @@
-import 'package:ai_assistent/about_us.dart';
 import 'package:ai_assistent/home_screen.dart';
 import 'package:ai_assistent/on_boarding.dart';
 import 'package:flutter/material.dart';
@@ -40,12 +39,12 @@ class _MyAppState extends State<MyApp> {
 
     if (_seen) {
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => HomeScreen()),
+        MaterialPageRoute(builder: (context) => const HomeScreen()),
       );
     } else {
       prefs.setBool('seen', true);
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => OnBoarding()),
+        MaterialPageRoute(builder: (context) => const OnBoarding()),
       );
     }
   }
@@ -59,7 +58,7 @@ class _MyAppState extends State<MyApp> {
       builder: (context, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'Assistro',
+          title: 'ProChat',
           theme: ThemeData(
             fontFamily: 'Poppins',
             primarySwatch: Colors.blue,
@@ -69,12 +68,12 @@ class _MyAppState extends State<MyApp> {
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.done) {
                 if (_seen) {
-                  return HomeScreen();
+                  return const HomeScreen();
                 } else {
-                  return OnBoarding();
+                  return const OnBoarding();
                 }
               } else {
-                return Scaffold(
+                return const Scaffold(
                   body: Center(
                     child: CircularProgressIndicator(),
                   ),

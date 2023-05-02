@@ -53,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    _timer = Timer.periodic(Duration(seconds: 3), (Timer timer) {
+    _timer = Timer.periodic(const Duration(seconds: 3), (Timer timer) {
       if (_currentPage < 2) {
         _currentPage++;
       } else {
@@ -83,10 +83,10 @@ class _HomeScreenState extends State<HomeScreen> {
           color: Colors.white,
             boxShadow: [
               BoxShadow(
-                color: Colors.black12,
-                spreadRadius: 1.0,
-                blurRadius: 5.0,
-                offset: Offset(1, 1,), // changes position of shadow
+                color: Colors.black,
+                spreadRadius: 0.0,
+                blurRadius: 0.0,
+                offset: Offset(0, 0,), // changes position of shadow
               ),
             ],
             borderRadius: BorderRadius.only(
@@ -102,7 +102,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => SiteWebView(),
+                    builder: (context) => const SiteWebView(),
                   ),
                 );
               },
@@ -127,7 +127,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => AboutUs(),
+                    builder: (context) => const AboutUs(),
                   ),
                 );
               },
@@ -195,7 +195,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           ),
                                         ),
                                         Text(
-                                          'I’m your Assistro!!',
+                                          'I’m your AI Assistant!!',
                                           style: TextStyle(
                                               fontSize: 18.sp,
                                               fontWeight: FontWeight.w600,
@@ -205,21 +205,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                       ],
                                     ),
                                   ),
-                                  SizedBox(height: 36.h,width: 36.w,)
-                                  /*InkWell(
-                                    onTap: (){
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) => DemoAd(),
-                                        ),
-                                      );
-                                    },
-                                    child: SvgPicture.asset(
-                                      "assets/images/notification_appbar.svg",
-                                      height: 38.h,
-                                    ),
-                                  ),*/
                                 ],
                               ),
                             ),
@@ -227,7 +212,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             CarouselSlider(
                               items: [
                                 Container(
-                                  margin: EdgeInsets.all(6.0),
+                                  margin: const EdgeInsets.all(6.0),
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(8.0),
                                     image: const DecorationImage(
@@ -237,7 +222,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ),
                                 ),
                                 Container(
-                                  margin: EdgeInsets.all(6.0),
+                                  margin: const EdgeInsets.all(6.0),
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(8.0),
                                     image: const DecorationImage(
@@ -247,7 +232,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ),
                                 ),
                                 Container(
-                                  margin: EdgeInsets.all(6.0),
+                                  margin: const EdgeInsets.all(6.0),
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(8.0),
                                     image: const DecorationImage(
@@ -264,7 +249,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 aspectRatio: 16 / 9,
                                 autoPlayCurve: Curves.fastOutSlowIn,
                                 enableInfiniteScroll: true,
-                                autoPlayAnimationDuration: Duration(milliseconds: 800),
+                                autoPlayAnimationDuration: const Duration(milliseconds: 800),
                                 viewportFraction: 0.8,
                               ),
                             ),
@@ -286,7 +271,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                                 height: 330.h,
                                 width: 330.w,
-                                padding: EdgeInsets.all(8),
+                                padding: const EdgeInsets.all(8),
                                 child: GridView.builder(
                                   physics: const ScrollPhysics(),
                                   itemCount: myData.length,
@@ -324,7 +309,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             ),
                                           ),
                                           Padding(
-                                            padding: const EdgeInsets.only(top:6.0),
+                                            padding: const EdgeInsets.only(top:2.0),
                                             child: Text(
                                                 myData[index]['name'],
                                               textAlign: TextAlign.center,

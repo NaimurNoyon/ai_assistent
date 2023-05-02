@@ -1,6 +1,5 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
@@ -131,7 +130,7 @@ class _WebScreenState extends State<WebScreen> {
       )
       ..loadRequest(Uri.parse(myData[widget.id]['link']));
 
-    //_loadRewardedAd();
+    _loadRewardedAd();
   }
 
   @override
@@ -177,7 +176,7 @@ class _WebScreenState extends State<WebScreen> {
                         child: Container(
                           height: 96,
                           width: 96,
-                          margin: EdgeInsets.symmetric(horizontal: 20),
+                          margin: const EdgeInsets.symmetric(horizontal: 20),
                           decoration: BoxDecoration(
                               color: AppColors.colorPrimary,
                               borderRadius: BorderRadius.circular(12)),
@@ -201,8 +200,8 @@ class _WebScreenState extends State<WebScreen> {
                         color: Colors.white,
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.blue,
-                            spreadRadius: 1.0,
+                            color: Colors.black,
+                            spreadRadius: 10.0,
                             blurRadius: 5.0,
                             offset: Offset(1, 1,), // changes position of shadow
                           ),
@@ -249,7 +248,7 @@ class _WebScreenState extends State<WebScreen> {
                                 Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => HomeScreen(),
+                                    builder: (context) => const HomeScreen(),
                                   ),
                                 );
                               },
@@ -349,7 +348,7 @@ class _WebScreenState extends State<WebScreen> {
                         child: Container(
                           height: 96,
                           width: 96,
-                          margin: EdgeInsets.symmetric(horizontal: 20),
+                          margin: const EdgeInsets.symmetric(horizontal: 20),
                           decoration: BoxDecoration(
                               color: AppColors.colorPrimary,
                               borderRadius: BorderRadius.circular(12)),
@@ -373,8 +372,8 @@ class _WebScreenState extends State<WebScreen> {
                         color: Colors.white,
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.blue,
-                            spreadRadius: 1.0,
+                            color: Colors.black,
+                            spreadRadius: 10.0,
                             blurRadius: 5.0,
                             offset: Offset(1, 1,), // changes position of shadow
                           ),
@@ -421,7 +420,7 @@ class _WebScreenState extends State<WebScreen> {
                                 Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => HomeScreen(),
+                                    builder: (context) => const HomeScreen(),
                                   ),
                                 );
                               },
@@ -482,7 +481,7 @@ class _WebScreenState extends State<WebScreen> {
           children: [
             Lottie.asset(
               'assets/animation/no_data.json',
-              width: 200.w
+              width: 200.w,
             ),
             SizedBox(height: 16.h,),
             const Text('No Internet Connection',style: TextStyle(color: AppColors.colorBlackLowEmp),),
